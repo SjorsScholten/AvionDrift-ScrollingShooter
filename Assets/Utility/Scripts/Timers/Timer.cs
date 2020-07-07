@@ -16,7 +16,7 @@ namespace Util.Timers {
         private float _timeLastTick = 0f;
 
         private bool _awake = false;
-        private bool _paused = false;
+        //private bool _paused = false;
 
         public event Action OnTimerStart;
         public event Action OnTimerTick;

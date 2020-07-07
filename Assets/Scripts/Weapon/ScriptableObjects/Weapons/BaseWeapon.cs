@@ -8,7 +8,7 @@ namespace Entities {
         public float regenDelay;
         public float regenSpeed;
 
-        public abstract void Fire(Vector3 position, Element element);
+        public abstract void Fire(Vector3 position, Element element, float deltaTime);
 
         protected void Decay() {
             

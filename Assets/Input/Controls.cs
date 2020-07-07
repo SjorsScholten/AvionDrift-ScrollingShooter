@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/Input/Controls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Input/Controls.inputactions'
 
 using System;
 using System.Collections;
@@ -28,11 +28,11 @@ public class @Controls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""Fire"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""fe327ff0-a033-4aec-be3d-950bc37c0370"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Integer"",
                     ""processors"": """",
-                    ""interactions"": ""Press""
+                    ""interactions"": ""Press(behavior=2)""
                 }
             ],
             ""bindings"": [
@@ -160,7 +160,7 @@ public class @Controls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""a1ff314f-3de9-4dd6-8c42-4cd6bd86d00c"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""path"": ""<Keyboard>/z"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard and Mouse"",

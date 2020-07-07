@@ -9,8 +9,8 @@ namespace Entities {
 
         [SerializeField] private float _mass = 1;
 
-        [SerializeField] private Element[] _elements;
-        [SerializeField] private BaseWeapon[] _weapons;
+        [SerializeField] private Element[] _elements = null;
+        [SerializeField] private BaseWeapon[] _weapons = null;
         
         //public Gear[] gear;
 

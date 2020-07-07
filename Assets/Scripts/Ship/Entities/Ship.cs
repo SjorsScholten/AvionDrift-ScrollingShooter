@@ -8,6 +8,8 @@ namespace Ship.Entities {
         
         private float _currentHealth;
         
+        public Vector3 Velocity { get; private set; } = Vector3.zero;
+        
         private Element _currentElement;
         private BaseWeapon _currentWeapon;
         
@@ -46,12 +48,11 @@ namespace Ship.Entities {
         */
         
         public void MoveTowards(Vector3 direction, float deltaTime) {
-            var calculatedSpeed = _data.Agility * deltaTime;
-            var calculatedPosition = direction * calculatedSpeed;
-            _controller.ProcessMovePosition(calculatedPosition);
+            if(direction == Vector3.zero) return; //dont need to move to its current position
+            _controller.ProcessMovePosition(direction * _data.Agility * deltaTime);
         }
 
-        public void FireWeapon(Vector3 position) => _data.Weapons[0].Fire(position, _data.Elements[0]);
+        public void FireWeapon(Vector3 position, float deltaTime) => _currentWeapon.Fire(position, _currentElement, deltaTime);
 
         public void ChangeElement(int elementIndex) {
             _currentElement = _data.Elements[elementIndex];
